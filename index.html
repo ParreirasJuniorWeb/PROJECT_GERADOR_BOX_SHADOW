@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Box Shadow</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/calc-svgrepo-com.png" type="image/x-icon">
+    <!--Toastify-notifications JS-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <div id="box-shadow-generator">
+        <div id="controls-container">
+            <h2>Configurações da Box Shadow:</h2>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="horizontal">Deslocamento horizontal:</label>
+                    <input type="range" id="horizontal" min="-100" max="100" value="5" />
+                </div>
+                <div class="reference-input">
+                    <input type="text" id="horizontal-value" name="horizontal-value" />
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="vertical">Deslocamento vertical:</label>
+                    <input type="range" id="vertical" min="-100" max="100" value="5" />
+                </div>
+                <div class="reference-input">
+                    <input type="text" id="vertical-value" name="vertical-value" />
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="blur">Intensidade do borrão (Blur):</label>
+                    <input type="range" id="blur" min="0" max="100" value="10" />
+                </div>
+                <div class="reference-input">
+                    <input type="text" id="blur-value" name="blur-value" />
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="spread">Intensidade do espalhamento (Spread):</label>
+                    <input type="range" id="spread" min="-100" max="100" value="3" />
+                </div>
+                <div class="reference-input">
+                    <input type="text" id="spread-value" name="spread-value" />
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="color">Cor da sombra:</label>
+                    <input type="color" id="color" value="#000000" />
+                </div>
+                <div class="reference-input">
+                    <input type="text" id="color-value" name="color-value" />
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="opacity">Opacidade da sombra:</label>
+                    <input type="range" id="opacity" min="0" max="1" value="1" step="0.01" />
+                </div>
+                <div class="reference-input">
+                    <input type="text" id="opacity-value" name="opacity-value" />
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="inset-input">
+                    <label for="inset">Sombra interna? (Inset)</label>
+                    <input type="checkbox" id="inset" name="inset" />
+                </div>
+            </div>
+        </div>
+        <div id="preview-container">
+            <h2>Preview do Efeito:</h2>
+            <div id="preview"></div>
+            <div id="rules-container">
+                <h2>Regra CSS:</h2>
+                <div id="rules">
+                    <p>box-shadow: <span id="rule">5px 5px 10px 3px #000000;</span></p>
+                    <p>-webkit-box-shadow: <span id="webkit-rule">5px 5px 10px 3px #000000;</span></p>
+                    <p>-moz-box-shadow: <span id="moz-rule">5px 5px 10px 3px #000000;</span></p>
+                </div>
+                <button id="copy-rules"><i class="fa-regular fa-copy"></i>Copiar Regras</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./JS/script.js"></script>
+</body>
+</html>
